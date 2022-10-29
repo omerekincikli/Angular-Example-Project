@@ -1,1 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
+@import '../node_modules/alertifyjs/build/css/alertify.min.css';
+@import '../node_modules/alertifyjs/build/css/themes/bootstrap.min.css';
+@import '../src/assets/fontawesome/css/fontawesome.css';
+@import '../src/assets/fontawesome/css/brands.css';
+@import '../src/assets/fontawesome/css/solid.css';
