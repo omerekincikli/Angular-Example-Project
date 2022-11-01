@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { AlertifyService } from './_services/alertify.service';
 import { AuthService } from './_services/auth.service';
 
 @Component({
@@ -12,20 +11,25 @@ export class AppComponent {
 
   constructor(
     private authService: AuthService,
-    private router: Router,
-    private alertify: AlertifyService
+    private router: Router
   ) { }
 
   ngOnInit(): void {
     if (!this.authService.isLoggedIn()) {
+      this.isLoggedIn = false;
       this.router.navigate(['/login']);
+    }
+    else{
+      this.isLoggedIn = true;
     }
   }
 
   title = 'Angular Frontend';
+  isLoggedIn = false;
 
   loggedIn() {
-    return this.authService.isLoggedIn();
+    this.isLoggedIn = this.authService.isLoggedIn();
+    return this.isLoggedIn;
   }
 
   logout() {

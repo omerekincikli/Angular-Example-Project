@@ -57,7 +57,6 @@ export class AuthService {
   compareTime(keyObj: any) {
     if (keyObj.timestamp + (60 * 60 * 1000) > Date.now()) {
       keyObj.timestamp = Date.now();
-      console.log("timestamp güncelledi");
       localStorage.setItem("key", JSON.stringify(keyObj));
       this.loggedIn = true;
       return true;
