@@ -18,6 +18,7 @@ export class AuthService {
 
   readonly apiUrl = 'http://localhost:50306/api/User/';
   loggedIn: boolean = false;
+  username = "";
 
   login(model: any) {
     const httpOptions = { headers: new HttpHeaders({ 'Content-Type': 'application/json' }) };
@@ -25,7 +26,7 @@ export class AuthService {
       map((response: any) => {
         const user = response;
         if (user) {
-          var keyObj = { token: user.Token, userId: user.ID, timestamp: Date.now() }
+          var keyObj = { token: user.Token, username: user.Username, timestamp: Date.now() }
           localStorage.setItem("key", JSON.stringify(keyObj));
           this.loggedIn = true;
         }
@@ -59,6 +60,7 @@ export class AuthService {
       keyObj.timestamp = Date.now();
       localStorage.setItem("key", JSON.stringify(keyObj));
       this.loggedIn = true;
+      this.username = keyObj.username;
       return true;
     }
     else {

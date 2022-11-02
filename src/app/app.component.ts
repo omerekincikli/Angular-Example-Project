@@ -26,9 +26,11 @@ export class AppComponent {
 
   title = 'Angular Frontend';
   isLoggedIn = false;
+  username = "";
 
   loggedIn() {
     this.isLoggedIn = this.authService.isLoggedIn();
+    this.username = this.authService.username;
     return this.isLoggedIn;
   }
 

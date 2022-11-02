@@ -12,6 +12,9 @@ import { ApiserviceService } from 'src/app/_services/apiservice.service';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
+import { UserComponent } from './user/user.component';
+import { UserEditComponent } from './user/user-edit/user-edit.component';
+import { UserProfileComponent } from './user/user-profile/user-profile.component';
 
 
 @NgModule({
@@ -24,6 +27,9 @@ import { LoginComponent } from './login/login.component';
     ShowEmployeeComponent,
     AddEditEmployeeComponent,
     LoginComponent,
+    UserComponent,
+    UserEditComponent,
+    UserProfileComponent,
   ],
   imports: [
     BrowserModule,
