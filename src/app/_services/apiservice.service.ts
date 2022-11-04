@@ -58,4 +58,12 @@ export class ApiserviceService {
     return this.http.get<any[]>(this.apiUrl + 'Employee/GetAllDepartmentNames');
   }
 
+  updatePhotoUser(user: any) {
+    return this.http.post<any>(this.apiUrl + 'User/UpdatePicture/', user, httpOptions);
+  }
+
+  uploadPhotoUser(photo: any) {
+    return this.http.post(this.apiUrl + 'User/Savefile/', photo);
+  }
+
 }

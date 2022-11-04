@@ -1,1 +1,21 @@
-<p>user-edit works!</p>
+<div class="modal fade" id="user-edit" tabindex="-1" aria-labelledby="user-edit-label" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="user-edit-label">Edit Profil Picture</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>You can change your profile picture</p>
+                <div class="p-2 w-50 bd-highlight">
+                    <img width="250px" height="250px" [src]="PhotoFilePath" />
+                    <input class="m-2" type="file" (change)="uploadPhoto($event)">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button (click)="saveChanges()" type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from 'src/app/_services/auth.service';
 
 @Component({
   selector: 'app-user-profile',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserProfileComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private authService: AuthService,
+  ) { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void { }
 
+  username = this.authService.username;
+  photoUrl = "http://localhost:50306/Photos/" + this.authService.photoFileName;
 }

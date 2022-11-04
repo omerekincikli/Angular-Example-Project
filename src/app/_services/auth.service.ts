@@ -19,6 +19,8 @@ export class AuthService {
   readonly apiUrl = 'http://localhost:50306/api/User/';
   loggedIn: boolean = false;
   username = "";
+  ID = "";
+  photoFileName = "";
 
   login(model: any) {
     const httpOptions = { headers: new HttpHeaders({ 'Content-Type': 'application/json' }) };
@@ -26,7 +28,7 @@ export class AuthService {
       map((response: any) => {
         const user = response;
         if (user) {
-          var keyObj = { token: user.Token, username: user.Username, timestamp: Date.now() }
+          var keyObj = { token: user.Token, username: user.Username, timestamp: Date.now(), ID: user.ID, photoFileName:user.PhotoFileName }
           localStorage.setItem("key", JSON.stringify(keyObj));
           this.loggedIn = true;
         }
@@ -61,13 +63,14 @@ export class AuthService {
       localStorage.setItem("key", JSON.stringify(keyObj));
       this.loggedIn = true;
       this.username = keyObj.username;
+      this.ID = keyObj.ID;
+      this.photoFileName = keyObj.photoFileName;
       return true;
     }
     else {
       this.logout("Session expired. You should re-login.");
       return false;
     }
-
   }
 
 }
