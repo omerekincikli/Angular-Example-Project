@@ -27,10 +27,12 @@ export class AppComponent {
   title = 'Angular Frontend';
   isLoggedIn = false;
   username = "";
+  photoUrl = "";
 
   loggedIn() {
     this.isLoggedIn = this.authService.isLoggedIn();
     this.username = this.authService.username;
+    this.photoUrl = "http://localhost:50306/Photos/" + this.authService.photoFileName;
     return this.isLoggedIn;
   }
 
