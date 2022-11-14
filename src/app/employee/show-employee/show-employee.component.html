@@ -1,4 +1,4 @@
-<div class="row justify-content-center">
+<div *ngIf="EmployeeList.length" class="row justify-content-center">
   <div class="col-md-3 text-center">
     <button type="button" class="btn btn-primary m-2" data-bs-toggle="modal" data-bs-target="#exampleModal"
       (click)="addClick()">
@@ -27,7 +27,9 @@
   </div>
 </div>
 
-<table class="table table-striped">
+<app-placeholder *ngIf="EmployeeList.length == 0"></app-placeholder>
+
+<table *ngIf="EmployeeList.length" class="table table-striped">
   <thead>
     <tr>
       <th>#</th>

@@ -15,6 +15,7 @@ import { LoginComponent } from './login/login.component';
 import { UserComponent } from './user/user.component';
 import { UserEditComponent } from './user/user-edit/user-edit.component';
 import { UserProfileComponent } from './user/user-profile/user-profile.component';
+import { PlaceholderComponent } from './placeholder/placeholder.component';
 
 
 @NgModule({
@@ -30,6 +31,7 @@ import { UserProfileComponent } from './user/user-profile/user-profile.component
     UserComponent,
     UserEditComponent,
     UserProfileComponent,
+    PlaceholderComponent,
   ],
   imports: [
     BrowserModule,
