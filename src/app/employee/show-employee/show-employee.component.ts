@@ -32,18 +32,18 @@ export class ShowEmployeeComponent implements OnInit {
       DOJ: "",
       PhotoFileName: "anonymous.png"
     }
-    this.ModalTitle = "Add Employee";
+    this.ModalTitle = $localize`Add Employee`;
     this.ActivateAddEditEmpComp = true;
   }
 
   editClick(item: any) {
     this.emp = item;
-    this.ModalTitle = "Edit Employee";
+    this.ModalTitle = $localize`Edit Employee`;
     this.ActivateAddEditEmpComp = true;
   }
 
   deleteClick(item: any) {
-    this.alertify.confirm("Delete Employee", () => {
+    this.alertify.confirm($localize`Delete Employee`, () => {
       this.service.deleteEmployee(item.ID).subscribe(data => {
         this.alertify.success(data.toString());
         this.refreshEmpList();

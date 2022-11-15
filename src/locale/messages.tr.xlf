@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en-US" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="9105593908587182078" datatype="html">
+        <source> Add Employee </source>
+        <target> Personel Ekle </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/employee/show-employee/show-employee.component.html</context>
+          <context context-type="linenumber">4,6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6573189082125569197" datatype="html">
+        <source>Employee Id</source>
+        <target>Personel Id</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/employee/show-employee/show-employee.component.html</context>
+          <context context-type="linenumber">36</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="84666436235862265" datatype="html">
+        <source>Employee Name</source>
+        <target>Personel Adı</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/employee/show-employee/show-employee.component.html</context>
+          <context context-type="linenumber">37</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3955967824702499842" datatype="html">
+        <source>Department</source>
+        <target>Departman</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/employee/show-employee/show-employee.component.html</context>
+          <context context-type="linenumber">38</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6112441515236555619" datatype="html">
+        <source>Date Of Joining</source>
+        <target>Katıldığı Tarih</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/employee/show-employee/show-employee.component.html</context>
+          <context context-type="linenumber">39</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8432562579042371182" datatype="html">
+        <source>Options</source>
+        <target>Seçenekler</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/employee/show-employee/show-employee.component.html</context>
+          <context context-type="linenumber">40</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3906415992831497602" datatype="html">
+        <source>Add Employee</source>
+        <target>Personel Ekle</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/employee/show-employee/show-employee.component.ts</context>
+          <context context-type="linenumber">35</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4076467862341572472" datatype="html">
+        <source>Edit Employee</source>
+        <target>Personel Düzenle</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/employee/show-employee/show-employee.component.ts</context>
+          <context context-type="linenumber">41</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="734894423658297158" datatype="html">
+        <source>Delete Employee</source>
+        <target>Personel Sil</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/employee/show-employee/show-employee.component.ts</context>
+          <context context-type="linenumber">46</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

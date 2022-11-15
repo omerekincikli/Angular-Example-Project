@@ -9,10 +9,19 @@
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
+      "i18n": {
+        "sourceLocale": "en-US",
+        "locales": {
+          "tr": {
+            "translation": "src/locale/messages.tr.xlf"
+          }
+        }
+      },
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "localize": true,
             "outputPath": "dist/angular-frontend",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -28,6 +37,12 @@
             "scripts": []
           },
           "configurations": {
+            "tr": {
+              "localize": ["tr"]
+            },
+            "en": {
+              "localize": ["en"]
+            },
             "production": {
               "budgets": [
                 {
@@ -68,6 +83,9 @@
             },
             "development": {
               "browserTarget": "AngularFrontend:build:development"
+            },
+            "tr": {
+              "browserTarget": "AngularFrontend:build:tr"
             }
           },
           "defaultConfiguration": "development"
